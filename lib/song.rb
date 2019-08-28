@@ -52,8 +52,9 @@ class Song
     song = self.new
     binding.pry
     song_info = filename.split(" - ")
-    song.name = song_info[1].slice!(".mp3")
-    song.artist_name =
+    song_info[1].slice!(".mp3")
+    song.name = song_info[1]
+    song.artist_name = song_info[0]
     
     create_by_name(song.name)
     
